@@ -4,7 +4,7 @@ defmodule ExMon.Repo.Migrations.CreateTrainerTable do
   def change do
     create table(:trainers, primary_key: false) do
       add(:id, :uuid, primary_key: true)
-      add(:nome, :string)
+      add(:name, :string)
       add(:password_hash, :string)
       timestamps()
     end
