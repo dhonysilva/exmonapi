@@ -14,11 +14,11 @@ defmodule ExMonWeb.Router do
     plug(:accepts, ["json"])
   end
 
-  scope "/", ExMonWeb do
-    pipe_through(:browser)
+  # scope "/", ExMonWeb do
+  #   pipe_through(:browser)
 
-    get("/", PageController, :home)
-  end
+  #   get("/", PageController, :home)
+  # end
 
   # Other scopes may use custom stacks.
   # scope "/api", ExMonWeb do
