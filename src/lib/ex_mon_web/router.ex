@@ -12,6 +12,7 @@ defmodule ExMonWeb.Router do
 
   pipeline :api do
     plug(:accepts, ["json"])
+    resources("/trainers", TrainersController)
   end
 
   # scope "/", ExMonWeb do
@@ -46,6 +47,5 @@ defmodule ExMonWeb.Router do
     pipe_through(:api)
 
     get("/", WelcomeController, :index)
-    resources("/trainers", TrainersController)
   end
 end
