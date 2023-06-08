@@ -46,5 +46,6 @@ defmodule ExMonWeb.Router do
     pipe_through(:api)
 
     get("/", WelcomeController, :index)
+    resources("/trainers", TrainersController)
   end
 end
