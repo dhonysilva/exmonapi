@@ -1,4 +1,4 @@
-defmodule ExMon.PokerApi.Client do
+defmodule ExMon.PokeApi.Client do
   use Tesla
 
   plug(Tesla.Middleware.BaseUrl, "https://pokeapi.co/api/v2")
