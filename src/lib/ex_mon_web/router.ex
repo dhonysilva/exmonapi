@@ -13,6 +13,7 @@ defmodule ExMonWeb.Router do
   pipeline :api do
     plug(:accepts, ["json"])
     resources("/trainers", TrainersController)
+    get("/pokemons/:name", PokemonsController, :show)
   end
 
   # scope "/", ExMonWeb do
