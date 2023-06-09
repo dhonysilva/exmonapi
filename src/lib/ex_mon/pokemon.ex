@@ -1,10 +1,9 @@
 defmodule ExMon.Pokemon do
-  alias ElixirLS.LanguageServer.Experimental.Protocol.Proto.Macros.Json
   @keys [:id, :name, :weight, :types]
 
   @enforce_keys @keys
 
-  @derive Json.Encoder
+  @derive Jason.Encoder
   defstruct @keys
 
   def build(%{"id" => id, "name" => name, "weight" => weight, "types" => types}) do

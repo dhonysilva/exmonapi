@@ -1,7 +1,7 @@
 defmodule ExMonWeb.PokemonsController do
   use ExMonWeb, :controller
 
-  action(fallback(ExMonWeb.FallbackController))
+  action_fallback(ExMonWeb.FallbackController)
 
   def show(conn, %{"name" => name}) do
     name
