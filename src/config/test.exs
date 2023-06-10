@@ -8,7 +8,7 @@ import Config
 config :ex_mon, ExMon.Repo,
   username: "postgres",
   password: "postgres",
-  hostname: "localhost",
+  hostname: "db",
   database: "ex_mon_test#{System.get_env("MIX_TEST_PARTITION")}",
   pool: Ecto.Adapters.SQL.Sandbox,
   pool_size: 10
@@ -16,7 +16,7 @@ config :ex_mon, ExMon.Repo,
 # We don't run a server during test. If one is required,
 # you can enable the server option below.
 config :ex_mon, ExMonWeb.Endpoint,
-  http: [ip: {127, 0, 0, 1}, port: 4002],
+  http: [ip: {0, 0, 0, 0}, port: 4002],
   secret_key_base: "ylNq9yyy1qSWHZ4sN9d/jYHhcYPUWqdoZ2C4RfewwP1r9e/7G85S5QObMxCHZ8G4",
   server: false
 
